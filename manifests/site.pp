@@ -57,6 +57,27 @@ node default {
   include git
   include zsh
   include iterm2::dev
+  include evernote
+  include firefox
+  include chrome
+  include spotify
+  include redis
+  include steam
+  include hipchat
+  include vlc
+  include wget
+  include charles
+  include spectacle
+  include googledrive
+  include better_touch_tools
+  include java
+  include erlang
+  include phpstorm
+
+
+  class { 'intellij':
+    edition => 'community',
+  }
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
